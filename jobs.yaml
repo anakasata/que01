@@ -1,0 +1,15 @@
+# https://wikitech.wikimedia.org/wiki/Help:Toolforge/Jobs_framework
+---
+# another one-off job after the previous one finished running
+- name: cue00
+  image: python3.11
+  command: "pyvenv/bin/python cue00.py"
+  schedule: "0 17 * * *"
+- name: cue01
+  image: python3.11
+  command: "pyvenv/bin/python cue01.py"
+  schedule: "0 1 * * *"
+- name: cue02
+  image: python3.11
+  command: "pyvenv/bin/python cue01.py"
+  schedule: "0 9 * * *"
